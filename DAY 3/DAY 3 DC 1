@@ -1,0 +1,25 @@
+import React,{useState} from "react";
+const App=()=>
+{
+    const [task,setTask]=useState([{id:1,name:'Task 1'},{id:2,name:'Task 2'},{id:3,name:'Task 3'}]);
+    const handleSubmit=(id)=>{
+        setTask(task.filter(t=>t.id!==id))
+    }
+    return(
+        <div style={{backgroundColor:'lavender',width:'300px',height:'350px',alignItems:'center',justifyContent:'center',textAlign:'center',paddingTop:'35px'}}>
+           <div>
+            <h1>Task List</h1>
+            <ul style={{listStyle:'none'}}>
+                {task.map(t=>(
+                <li key={t.id}>
+                    {t.name}
+                    &nbsp;
+                    <button type="submit" onClick={()=>handleSubmit(t.id)} style={{backgroundColor:'red',color:'White'}}>Delete</button>
+                </li>
+                ))}
+            </ul>
+            </div>
+        </div>
+    )
+}
+export default App;
