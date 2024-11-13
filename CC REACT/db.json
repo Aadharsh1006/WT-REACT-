@@ -1,0 +1,84 @@
+{
+  "users": [
+    {
+      "id": "9886",
+      "username": "AADHARSH",
+      "phoneNumber": "123",
+      "password": "123"
+    },
+    {
+      "id": "1adb",
+      "username": "ABCD",
+      "phoneNumber": "123456",
+      "password": "root"
+    },
+    {
+      "id": "333e",
+      "username": "123",
+      "phoneNumber": "12",
+      "password": "123"
+    },
+    {
+      "id": "d05b",
+      "username": "Aadharsh",
+      "phoneNumber": "123456789",
+      "password": "123"
+    },
+    {
+      "id": "30a2",
+      "username": "Dhivyya",
+      "phoneNumber": "9894949244",
+      "password": "Aadharsh"
+    }
+  ],
+  "purchases": [
+    {
+      "id": "5fc5",
+      "productName": "Pen",
+      "quantity": 2,
+      "amount": "100",
+      "total": 200
+    }
+  ],
+  "sales": [
+    {
+      "id": "0ea2",
+      "productName": "Pen",
+      "quantity": "1",
+      "amount": "100",
+      "total": 100
+    }
+  ],
+  "credits": [
+    {
+      "id": "96c0",
+      "productName": "Pen",
+      "quantity": "1",
+      "amount": "100",
+      "total": 100
+    }
+  ],
+  "accbook": [
+    {
+      "id": "6da9",
+      "productName": "Pen",
+      "quantity": "1",
+      "amount": "100",
+      "total": 100
+    },
+    {
+      "id": "90ac",
+      "productName": "Pen",
+      "quantity": "1",
+      "amount": "100",
+      "total": 100
+    },
+    {
+      "id": "d775",
+      "productName": "Pen",
+      "quantity": "1",
+      "amount": "100",
+      "total": 100
+    }
+  ]
+}
