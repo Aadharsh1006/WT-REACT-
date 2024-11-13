@@ -1,0 +1,298 @@
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Updated font for a modern look */
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9; /* Light background for a clean look */
+  transition: background 0.5s; /* Smooth background transition */
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 250px;
+  background: linear-gradient(180deg, #2c3e50 0%, #34495e 100%); /* Gradient for depth */
+  color: #ecf0f1; /* Light text for contrast */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Deeper shadow for dimension */
+  transition: width 0.3s; /* Smooth transition for width changes */
+}
+
+.sidebar:hover {
+  width: 270px; /* Slightly widen on hover for emphasis */
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em; /* Increased font size for headings */
+  font-weight: bold; /* Make headings stand out */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  animation: fadeIn 0.5s; /* Fade-in effect */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px; /* Increased padding for better touch targets */
+  cursor: pointer;
+  transition: background-color 0.3s ease, padding 0.3s ease; /* Smooth transition */
+  border-radius: 5px; /* Rounded corners for links */
+}
+
+.sidebar ul li:hover,
+.sidebar ul li.active {
+  background-color: #34495e; /* Slightly darker on hover */
+  padding-left: 20px; /* Add padding on hover for visual feedback */
+  animation: bounce 0.2s; /* Bounce effect on hover */
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.logout-button {
+  background-color: #e74c3c; /* Logout button color */
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Increased horizontal padding */
+  cursor: pointer;
+  margin-top: auto;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  align-self: flex-start; /* Align the logout button to the start */
+}
+
+.logout-button:hover {
+  background-color: #c0392b; /* Darker on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px; /* Increased padding for main content */
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  background-color: #ffffff; /* White background for main content */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for main content */
+  border-radius: 8px; /* Rounded corners for main content */
+  transition: all 0.3s ease; /* Smooth transition for main content */
+}
+
+.accordion {
+  margin-top: 20px;
+}
+
+.accordion-item {
+  background-color: #ffffff; /* White background for items */
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px; /* Softer shadow */
+  margin-bottom: 15px; /* Space between accordion items */
+  transition: transform 0.3s; /* Smooth transition for transform effects */
+}
+
+.accordion-item:hover {
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.accordion-header {
+  padding: 15px; /* Increased padding */
+  background-color: #2980b9; /* Header color */
+  color: white;
+  cursor: pointer;
+  border-radius: 5px; /* Rounded corners for header */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.accordion-header:hover {
+  background-color: #1c598a; /* Darker on hover */
+}
+
+.accordion-content {
+  padding: 20px; /* Consistent padding for content */
+  animation: slideIn 0.3s; /* Slide-in effect */
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.item-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.item-form input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+/* Adding focus styles for better accessibility */
+.item-form input:hover,
+.item-form input:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+.loading {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  color: #2980b9; /* Use your theme color */
+}
+.sidebar ul li:hover {
+  transform: scale(1.05);
+}
+
+.editaccbook,
+.deleteaccbook {
+  background-color: #2980b9; /* Primary button color */
+  color: white; /* Text color */
+  border: none; /* Remove border for a cleaner look */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px 15px; /* Consistent padding */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */ 
+  margin-left:0px;
+  display:contents;
+}
+
+.editaccbook:hover,
+.deleteaccbook:hover {
+  background-color: #1c598a; /* Darker on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.item-form button {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 20px; /* Increased horizontal padding */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+  margin-top: 10px; /* Space above buttons for separation */
+  align-self: flex-end; /* Align buttons to the end of the form */
+}
+
+.item-form button:hover {
+  background-color: #219653;
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+/* Input field styles */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 4px; /* Slightly rounded corners */
+  font-size: 16px; /* Increased font size for readability */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.input-field:focus {
+  border-color: #007bff; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Subtle shadow on focus */
+}
+
+.input-field::placeholder {
+  color: #aaa; /* Light gray for placeholder text */
+  font-style: italic; /* Italic style for placeholder */
+}
+
+/* Additional styles for login form inputs */
+.login-input {
+  width: calc(100% - 20px); /* Adjust width for padding */
+  margin-bottom: 15px; /* Space between fields */
+}
+
+/* Button styles for submission */
+.submit-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Primary button color */
+  color: #fff; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth background color change */
+}
+
+.submit-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.final-result {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2em; /* Slightly larger font size for emphasis */
+}
+
+/* Alignment for Edit and Delete buttons */
+.item-buttons {
+  display: flex; /* Use Flexbox for button alignment */
+  justify-content: flex-end; /* Align buttons to the right */
+  margin-top: 10px; /* Space above the buttons */
+  width: 100%; /* Ensure it takes full width of the container */
+}
+
+/* Additional styling for better spacing and alignment */
+.item-buttons {
+  margin-top: 15px; /* Space above the button group */
+  justify-content: flex-end; /* Ensure buttons are at the end */
+}
+
+/* Additional styles for a more cohesive look */
+.editaccbook,
+.deleteaccbook {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+.editaccbook:active,
+.deleteaccbook:active {
+  transform: scale(0.95); /* Slightly shrink on active */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px; /* Slightly smaller on mobile */
+  }
+  
+  .main-content {
+    padding: 20px; /* Less padding on mobile */
+  }
+  
+  .item-form input {
+    padding: 10px; /* Adjust padding for inputs on mobile */
+  }
+
+  .item-form button {
+    padding: 10px; /* Adjust button padding on mobile */
+  }
+}
